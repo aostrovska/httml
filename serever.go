@@ -24,6 +24,13 @@ func Handler(w http.ResponseWriter, req *http.Request) {
 		
 		fmt.Printf("%s\n", data)
 		io.WriteString(w, "successful post")
+	}else if req.Method == "GET"{
+		data, err := ioutil.ReadAll(req.Body)
+		req.Body.Close()
+		if err != nil {return }
+		
+		fmt.Printf("%s\n", data)
+		io.WriteString(w, "successful get")
 	} else {
 		w.WriteHeader(405)
 	}

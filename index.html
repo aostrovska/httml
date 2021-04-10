@@ -14,16 +14,14 @@
 
 <body>
   <script src="js/scripts.js"></script>
-  <strong><p>URL</p></strong>
-  <select  name="urls" id="urls">
-  <optgroup label="url">
-    <option value="localhost">http://localhost:8080/</option>
-  </optgroup>
+   <p>Url</p>
+  <input type="text" id="url" name="url"><br><br>
+  <p><strong>Body</strong></p>
+  <select  name="body" id="body">
+    <option value="POST">POST</option>
+    <option value="GET">GET</option>
   </select>
-  <input type="Submit" id="url" name="url"><br><br>
   <br><br>
-  <p>Body</p>
-  <input type="text" id="body" name="body"><br><br>
   <button type="button" onclick="pop()">Click Me!</button><br><br>
   <div>
 	  Response:
